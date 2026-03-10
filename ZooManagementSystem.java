@@ -4,15 +4,18 @@ public class ZooManagementSystem {
     
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-
+        int choice = 0;
+        // add a while loop
+        while(choice != 3){
         // FEATURE 1
         System.out.println("Welcome to the Zoo Management System");
         System.out.println("menu");
         System.out.println("1. View Animals");
         System.out.println("2. Search Animals");
-        System.out.println("4. Exit");
-        int choice = scanner.nextInt();
+        System.out.println("3. Exit");
+        choice = scanner.nextInt();
         // Scanner scanner input
+
 
         switch(choice){
             case 1: 
@@ -25,7 +28,7 @@ public class ZooManagementSystem {
             case 2:
                 System.out.println("Add animal selected:");
                 scanner.nextLine();
-                
+
                 // Storing data in variables
 
                 System.out.println("Enter animal name");
@@ -51,21 +54,12 @@ public class ZooManagementSystem {
             
             default:
                 System.out.println("Invalid option");
-
         }
 
+        }
+        // PART 1 COMPLETED
 
-
-        // ADD ANIMAL
-        //ENTER ANIMAL NAME
-        System.out.println("Enter animal name: ");
-        String animalName = scanner.nextLine();
-        
-        //ENTER ANIMAL SPECIES
-        System.out.println("Enter animal species: ");
-        String animalSpecies = scanner.nextLine();
-
-        // STORE THE INFORMATION IN A SYSTEM
+        // PART 2
 
 
     }
