@@ -31,15 +31,32 @@ public class ZooManagementSystem {
             case 1: 
                 System.out.println("Animals in the zoo: ");
 
+                StringBuilder list =new StringBuilder();
+
+                // using string builders to display animals
+
+                list.append("Animal List\n");
+                list.append("--------------------\n");
+
                 // user selects view animals
                 if(animalCount == 0){
-                    System.out.println("No animals added yet.");
+                    list.append("No animals added yet.\n");
+
                 }else{
                     for(int i = 0; i < animalCount; i++){
+
                         // print animals names and species that exists
-                        System.out.println(animalNames[i] + " - " + animalSpecies[i]);
+                        list.append("Name: ");
+                        list.append(animalNames[i]);
+                        list.append("\n");
+
+                        list.append("Species: ");
+                        list.append(animalSpecies[i]);
+                        list.append("\n");
+
                     }
                 }
+                System.out.println(list);
                 break;
 
             case 2:
@@ -85,7 +102,7 @@ public class ZooManagementSystem {
                 if(!found) {
                     System.out.println("Animal not found");
                 } 
-                
+
                 break;
             
             case 4:
@@ -97,8 +114,6 @@ public class ZooManagementSystem {
         }
 
         }
-        
-
 
     }
     
